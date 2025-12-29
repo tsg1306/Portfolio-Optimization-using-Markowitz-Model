@@ -1,7 +1,6 @@
 # 📈 Cryptocurrency Portfolio Optimization using Markowitz Mean-Variance Framework
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange.svg)](https://jupyter.org/)
 
 A dynamic portfolio optimization strategy for cryptocurrency assets using the classical **Markowitz Mean-Variance framework** with rolling windows. This project implements a complete backtesting pipeline with realistic constraints including transaction costs, volatility limits, and diversification requirements.
@@ -81,52 +80,11 @@ Instead of static optimization, we use a dynamic strategy:
 ├── Portfolio_Optimization_Markowitz.ipynb   # Main notebook with full analysis
 ├── data.csv                                  # Cryptocurrency price data (20 assets)
 ├── README.md                                 # This file
-├── requirements.txt                          # Python dependencies
-└── LICENSE                                   # MIT License
+└── requirements.txt                          # Python dependencies
 ```
 
----
 
-## 🚀 Getting Started
 
-### Prerequisites
-
-- Python 3.10 or higher
-- Jupyter Notebook or JupyterLab
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/crypto-portfolio-optimization.git
-   cd crypto-portfolio-optimization
-   ```
-
-2. **Create a virtual environment (recommended)**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-3. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Launch Jupyter Notebook**
-   ```bash
-   jupyter notebook Portfolio_Optimization_Markowitz.ipynb
-   ```
-
-### Requirements
-
-```txt
-numpy>=1.21.0
-pandas>=1.3.0
-scipy>=1.7.0
-cvxpy>=1.2.0
-matplotlib>=3.4.0
-```
 
 ---
 
@@ -188,34 +146,6 @@ Found through grid search optimization:
 
 ---
 
-## 🛠️ Customization
-
-### Modify Constraints
-
-In the notebook, adjust these parameters:
-
-```python
-# Risk constraints
-MAX_VOLATILITY = 0.235      # 23.5% (with buffer for 25% limit)
-W_DIV = 0.035               # Minimum diversification weight
-
-# Window sizes
-IS_window = 70              # In-sample period
-OOS_window = 35             # Rebalancing frequency
-
-# Risk aversion
-gamma = 1.7                 # Higher = more aggressive
-```
-
-### Use Your Own Data
-
-Replace `data.csv` with your own price data:
-- CSV format with date index
-- Columns = asset prices
-- Daily frequency recommended
-
----
-
 ## 📚 References
 
 1. **Markowitz, H.** (1952). Portfolio Selection. *The Journal of Finance*, 7(1), 77-91.
@@ -226,43 +156,5 @@ Replace `data.csv` with your own price data:
 
 4. **CVXPY Documentation**: [https://www.cvxpy.org/](https://www.cvxpy.org/)
 
----
 
-## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 👤 Author
-
-**Thomas**  
-Master's Student in Engineering @ CentraleSupélec  
-📧 [Contact](mailto:your.email@example.com)  
-🔗 [LinkedIn](https://linkedin.com/in/yourprofile)
-
----
-
-## ⭐ Acknowledgments
-
-- CentraleSupélec for the academic framework
-- CVXPY team for the excellent optimization library
-- The quantitative finance community for methodology insights
-
----
-
-<p align="center">
-  <i>If you found this project helpful, please consider giving it a ⭐!</i>
-</p>
